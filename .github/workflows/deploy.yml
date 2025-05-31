@@ -1,28 +1,11 @@
-name: Deploy via SSH
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout código
-      uses: actions/checkout@v3
-
-    - name: Acesso via SSH e deploy
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        host: 54.224.183.226
-        username: ubuntu # ou root, depende da sua VM
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
-          echo "✅ Conexão SSH bem-sucedida!"
-          cd /var/www/html/instancia1
-          echo "INSTANCIA 1" > index.html
-          systemctl reload nginx || true
+- name: Deploy via SSH
+  uses: appleboy/ssh-action@v1.0.0
+  with:
+    host: ${{ secrets.SSH_HOST }}
+    username: ${{ secrets.SSH_USER }}
+    key: ${{ secrets.SSH_PRIVATE_KEY }}
+    port: 22
+    script: |
+      echo "Deploy iniciado..."
+      ./deploy.sh
 
