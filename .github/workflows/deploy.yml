@@ -7,5 +7,6 @@
     port: 22
     script: |
       echo "Deploy iniciado..."
+      chmod +x deploy.sh
       ./deploy.sh
 
