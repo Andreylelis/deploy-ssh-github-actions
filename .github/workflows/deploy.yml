@@ -1,12 +1,27 @@
-- name: Deploy via SSH
-  uses: appleboy/ssh-action@v1.0.0
-  with:
-    host: ${{ secrets.SSH_HOST }}
-    username: ${{ secrets.SSH_USER }}
-    key: ${{ secrets.SSH_PRIVATE_KEY }}
-    port: 22
-    script: |
-      echo "Deploy iniciado..."
-      chmod +x deploy.sh
-      ./deploy.sh
+name: Deploy via SSH
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            echo "Deploy iniciado..."
+            cd /home/ubuntu/infra-devops-hw
+            ./deploy.sh
 
