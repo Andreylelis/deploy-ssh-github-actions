@@ -47,6 +47,12 @@ upstream backend {
     server 127.0.0.1:8082;  # Instância 2 do seu app
 }
 
+6. Agora crie duas instâncias com Python para simular os dois servidores:
+   ```bash
+   cd /var/www/html/instancia1
+   python3 -m http.server 8081 &
+   cd /var/www/html/instancia1
+   python3 -m http.server 8081 &
  
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
    ```bash
