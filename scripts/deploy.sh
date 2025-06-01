@@ -23,8 +23,8 @@ ls -l "${APP_DIR}"
 # Verifica se os arquivos existem
 if [[ -f "${APP_DIR}/index1.html" && -f "${APP_DIR}/index2.html" ]]; then
     echo "📄 Arquivos encontrados, copiando para ${DEST_DIR}..."
-    cp "${APP_DIR}/index1.html" "${DEST_DIR}/"
-    cp "${APP_DIR}/index2.html" "${DEST_DIR}/"
+  sudo cp "${APP_DIR}/index1.html" "${DEST_DIR}/"
+  sudo cp "${APP_DIR}/index2.html" "${DEST_DIR}/"
     echo "✅ Deploy concluído com sucesso."
 else
     echo "❌ Um ou mais arquivos não foram encontrados em '${APP_DIR}'."
