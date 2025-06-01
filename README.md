@@ -121,7 +121,7 @@ Use essa para autenticar o GitHub Actions
    USERNAME ubuntu
    KEY	Conteúdo da chave privada
 
-⚠NÃO usar a chave pública no GitHub
+NÃO usar a chave pública no GitHub
 A chave pública (.pub) vai só no servidor.
 A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
 
@@ -133,12 +133,12 @@ A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
    chmod 600 /home/ubuntu/.ssh/authorized_keys
 
 ✅ Subir no GitHub
-   ```bash
-   git init
-   git add .
-   git commit -m "Testando deploy SSH"
-   git remote add origin https://github.com/Andreylelis/deploy-ssh-github-actions.git
-   git push origin main
+    ```bash
+       git init
+       git add .
+       git commit -m "Testando deploy SSH"
+       git remote add origin https://github.com/Andreylelis/deploy-ssh-github-actions.git
+       git push origin main
 
 ---
 ## ⚙️ Workflow GitHub Actions
