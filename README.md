@@ -130,22 +130,19 @@ A chave pública (.pub) vai só no servidor.
 A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
 
 ⚠️ Se atente para verificar as permissões
-```bash
+   ```bash
 chown -R ubuntu:ubuntu /home/ubuntu/.ssh
 chmod 700 /home/ubuntu/.ssh
 chmod 600 /home/ubuntu/.ssh/authorized_keys
 
 ✅ Subir no GitHub
-  ```bash
+   ```bash
   git init
   git add .
   git commit -m "Testando deploy SSH"
   git remote add origin https://github.com/Andreylelis/deploy-ssh-github-actions.git
   git push origin main
   
-
-
-
 ---
 
 ## ⚙️ Workflow GitHub Actions
