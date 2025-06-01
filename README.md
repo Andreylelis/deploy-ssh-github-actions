@@ -61,6 +61,9 @@ upstream backend {
 ## ✅ Resultado do Balanceamento
 ![Balanciamento de cagas_nginx](https://github.com/user-attachments/assets/a3027275-abf1-4b26-baa5-77777e6e1d5b)
 
+✅ Balanceamento configurado com 2 instâncias rodando via python3 -m http.server nas portas 8081 e 8082.
+✅ NGINX configurado como proxy reverso na porta 80 com estratégia round-robin.
+✅ Testes realizados com curl http://localhost mostrando alternância entre as instâncias.
 
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
    ```bash
