@@ -110,7 +110,7 @@ Use essa para autorizar o acesso ao servidor remoto.
 Use essa para autenticar o GitHub Actions
    ```bash
    cat ~/.ssh/github-actions-key
-Copie tudo, incluindo as linhas:
+   Copie tudo, incluindo as linhas:
 -----BEGIN RSA PRIVATE KEY-----
 ...chave privada aqui...
 -----END RSA PRIVATE KEY-----
@@ -144,7 +144,7 @@ A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
   
 ## ⚙️ Workflow GitHub Actions
 
-2. Gere uma chave SSH para uso exclusivo do GitHub Actions:
+1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
 
@@ -168,7 +168,7 @@ A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
 - Conteúdo estático disponível via navegador, servido pelo NGINX (ou servidor configurado no destino).
 
 ---
-![image](https://github.com/user-attachments/assets/1eec5aa1-f40a-4c67-b876-9f7c98375c31)
+[image](https://github.com/user-attachments/assets/1eec5aa1-f40a-4c67-b876-9f7c98375c31)
 ![image](https://github.com/user-attachments/assets/97d56ccd-3645-4a21-a3ed-c0924543c3be)
 
 
