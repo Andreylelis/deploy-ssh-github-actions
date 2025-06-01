@@ -98,11 +98,12 @@ Para permitir que o GitHub se conecte via SSH à sua máquina de destino (servid
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-deploy" -f ~/.ssh/id_rsa_github
 
-2. Vai gerar dois arquivos:
+2. Vai gerar dois arquivos
+```bash
    ~/.ssh/id_rsa_github (chave privada)
    ~/.ssh/id_rsa_github.pub (chave pública)
 
-
+---
 ## ⚙️ Workflow GitHub Actions
 
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
