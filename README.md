@@ -30,7 +30,8 @@ Este projeto demonstra um balanceamento de cargas utilizando Nginx, onde há dua
 
 5. Editar o arquivo NGINX
     ```bash
-    vim /etc/nginx/sites-available/default
+    vim /etc/nginx/sites-available/default e colar as linhas abaixo:
+    ```bash
     server {
     listen 80;
     server_name 54.224.183.226;  
