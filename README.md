@@ -17,6 +17,7 @@ Este projeto demonstra a automação de deploy em uma máquina virtual (EC2) uti
     ```bash
     mkdir infra-devops-hw
     mkdir -p /var/www/html/instancia{1,2}
+    
 2.1 Acessar o diretório criado (infra-devops-hw) 
     ```bash
     cd infra-devops-hw/
