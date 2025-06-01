@@ -102,11 +102,11 @@ Para permitir que o GitHub se conecte via SSH à sua máquina de destino (servid
    ~/.ssh/github-actions-key.pub (chave pública)
 Use essa para autorizar o acesso ao servidor remoto.
 
-11. Copie a chave pública para o servidor remoto
+3. Copie a chave pública para o servidor remoto
    ```bash
    cat ~/.ssh/github-actions-key.pub >> ~/.ssh/authorized_keys
 
-12. Chave privada (github-actions-key)
+4. Chave privada (github-actions-key)
 Use essa para autenticar o GitHub Actions
    ```bash
    cat ~/.ssh/github-actions-key
