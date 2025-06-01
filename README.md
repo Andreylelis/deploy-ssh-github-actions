@@ -136,18 +136,18 @@ chmod 700 /home/ubuntu/.ssh
 chmod 600 /home/ubuntu/.ssh/authorized_keys
 
 ✅ Subir no GitHub
-```bash
-git init
-git add .
-git commit -m "Testando deploy SSH"
-git remote add origin https://github.com/Andreylelis/deploy-ssh-github-actions.git
-git push origin main
-
-git push -u origin main
+  ```bash
+  git init
+  git add .
+  git commit -m "Testando deploy SSH"
+  git remote add origin https://github.com/Andreylelis/deploy-ssh-github-actions.git
+  git push origin main
+  
 
 
 
 ---
+
 ## ⚙️ Workflow GitHub Actions
 
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
