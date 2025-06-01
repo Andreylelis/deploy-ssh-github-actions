@@ -20,3 +20,4 @@ Este projeto demonstra a automação de deploy em uma máquina virtual (EC2 ou s
 # test
 # test
 # test
+# test
