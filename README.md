@@ -18,12 +18,12 @@ Este projeto demonstra a automação de deploy em uma máquina virtual (EC2) uti
     mkdir infra-devops-hw
     mkdir -p /var/www/html/instancia{1,2}
     
-2.1 Acessar o diretório criado (infra-devops-hw) 
+  2.1 Acessar o diretório criado (infra-devops-hw) 
     ```bash
     cd infra-devops-hw/
     mkdir -p .github/workflows app/instancia1 app/instancia2 scripts nginx
     
-2.2 Criar os arquivos (index1.html, index2.html).Está localizado no (app).Será utilizado para uma das partes do projeto. Balanceamento com NGINX.
+  2.2 Criar os arquivos (index1.html, index2.html).Está localizado no (app).Será utilizado para uma das partes do projeto. Balanceamento com NGINX.
     ```bash
     vim app/index1.html
     vim app/index2.html
