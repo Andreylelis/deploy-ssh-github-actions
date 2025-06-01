@@ -65,17 +65,13 @@ infra-devops-hw/
 
 ---
 
-## 📸 (Opcional) Prints do Deploy
 
-Se desejar adicionar imagens:
+## 📸 Prints do item 1 - Configuração da Máquina Virtual - AWS EC2 UBUNTU
+
+![image](https://github.com/user-attachments/assets/fb4d390c-9b93-46ca-9cd5-f96229db4036)
+![image](https://github.com/user-attachments/assets/2a4e50db-3a84-4991-a2c7-95fa5f287e46)
 
 
 
-📌 Requisitos
 
-    Acesso a um servidor remoto com SSH ativo;
-
-    Permissão para escrever em /var/www/html;
-
-    GitHub Actions habilitado no repositório.
 
