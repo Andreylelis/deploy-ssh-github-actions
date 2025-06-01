@@ -100,7 +100,6 @@ Para permitir que o GitHub se conecte via SSH à sua máquina de destino (servid
    ```bash
    ~/.ssh/github-actions-key (chave privada)
    ~/.ssh/github-actions-key.pub (chave pública)
-
 Use essa para autorizar o acesso ao servidor remoto.
 
 11. Copie a chave pública para o servidor remoto
