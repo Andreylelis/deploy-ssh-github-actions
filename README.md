@@ -94,23 +94,23 @@ upstream backend {
 🔐 Configuração da chave SSH (deploy via GitHub Actions)
 
 Para permitir que o GitHub se conecte via SSH à sua máquina de destino (servidor):
-1. Gere um par de chaves SSH no terminal
+9. Gere um par de chaves SSH no terminal
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
 
 
-2. Vai gerar dois arquivos
+10. Vai gerar dois arquivos
    ```bash
    ~/.ssh/github-actions-key (chave privada)
    ~/.ssh/github-actions-key.pub (chave pública)
 
 Use essa para autorizar o acesso ao servidor remoto.
 
-3. Copie a chave pública para o servidor remoto
+11. Copie a chave pública para o servidor remoto
    ```bash
    cat ~/.ssh/github-actions-key.pub >> ~/.ssh/authorized_keys
 
-4. Chave privada (github-actions-key)
+12. Chave privada (github-actions-key)
 Use essa para autenticar o GitHub Actions
    ```bash
    cat ~/.ssh/github-actions-key
@@ -119,7 +119,8 @@ Copie tudo, incluindo as linhas:
 ...chave privada aqui...
 -----END RSA PRIVATE KEY-----
 
-5.Settings → Secrets and variables → Actions → New repository secret
+13.Settings → Secrets and variables → Actions → New repository secret
+   ```bash
 HOST IP
 USERNAME ubuntu
 KEY	Conteúdo da chave privada
@@ -142,12 +143,13 @@ git add .
 git commit -m "Testando deploy SSH"
 git remote add origin https://github.com/Andreylelis/deploy-ssh-github-actions.git
 git push origin main
-  
 
+---
+  
 ## ⚙️ Workflow GitHub Actions
 
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
-   ```bash
+ ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
 
 - O workflow `deploy.yml` é acionado automaticamente após o push para o repositório.
@@ -170,8 +172,8 @@ git push origin main
 - Conteúdo estático disponível via navegador, servido pelo NGINX (ou servidor configurado no destino).
 
 ---
-![image](https://github.com/user-attachments/assets/1eec5aa1-f40a-4c67-b876-9f7c98375c31)
-![image](https://github.com/user-attachments/assets/97d56ccd-3645-4a21-a3ed-c0924543c3be)
+[image](https://github.com/user-attachments/assets/1eec5aa1-f40a-4c67-b876-9f7c98375c31)
+[image](https://github.com/user-attachments/assets/97d56ccd-3645-4a21-a3ed-c0924543c3be)
 
 
 ## 📸 Prints do item 1 - Configuração da Máquina Virtual - AWS EC2 UBUNTU
