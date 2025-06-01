@@ -53,7 +53,15 @@ upstream backend {
    python3 -m http.server 8081 &
    cd /var/www/html/instancia1
    python3 -m http.server 8081 &
- 
+
+7. Reinicie o Nginx:
+   ```bash
+   systemctl restart nginx
+
+## ✅ Resultado do Balanceamento
+![Balanciamento de cagas_nginx](https://github.com/user-attachments/assets/a3027275-abf1-4b26-baa5-77777e6e1d5b)
+
+
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
