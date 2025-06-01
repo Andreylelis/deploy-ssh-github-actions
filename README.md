@@ -115,25 +115,24 @@ Use essa para autenticar o GitHub Actions
    ...chave privada aqui...
    -----END RSA PRIVATE KEY-----
 
-##⚙️Settings → Secrets and variables → Actions → New repository secret
+⚙️Settings → Secrets and variables → Actions → New repository secret
    ```bash
    HOST IP
    USERNAME ubuntu
    KEY	Conteúdo da chave privada
 
-## ⚠️NÃO usar a chave pública no GitHub
-
+⚠️NÃO usar a chave pública no GitHub
 A chave pública (.pub) vai só no servidor.
 A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
 
 ---
-## ⚠️ Se atente para verificar as permissões
+⚠️ Se atente para verificar as permissões
    ```bash
    chown -R ubuntu:ubuntu /home/ubuntu/.ssh
    chmod 700 /home/ubuntu/.ssh
    chmod 600 /home/ubuntu/.ssh/authorized_keys
 
-## ✅ Subir no GitHub
+✅ Subir no GitHub
    ```bash
    git init
    git add .
@@ -148,7 +147,7 @@ A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
 
-- O workflow `deploy.yml` é acionado automaticamente após o push para o repositório.
+ O workflow `deploy.yml` é acionado automaticamente após o push para o repositório.
 - Utiliza a action [`appleboy/ssh-action`](https://github.com/appleboy/ssh-action) para conectar no servidor via SSH.
 - Executa o script `deploy.sh`, que:
 - Lista os arquivos no diretório `app/`;
