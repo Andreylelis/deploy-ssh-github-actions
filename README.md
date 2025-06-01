@@ -91,15 +91,17 @@ upstream backend {
 
 ---
 
-## 🔐 Segurança
+🔐 Configuração da chave SSH (deploy via GitHub Actions)
 
-- As credenciais SSH são armazenadas como **secrets no GitHub**:
-  - `HOST` — Endereço do servidor;
-  - `USERNAME` — Usuário SSH;
-  - `KEY` — Chave privada;
-- O script é executado sem interação e exige permissões apropriadas para gravar no diretório de destino.
+Para permitir que o GitHub se conecte via SSH à sua máquina de destino (servidor):
+1. Gere um par de chaves SSH no terminal
+   ```bash
+   ssh-keygen -t rsa -b 4096 -C "github-deploy" -f ~/.ssh/id_rsa_github
 
----
+2. Vai gerar dois arquivos:
+   ~/.ssh/id_rsa_github (chave privada)
+   ~/.ssh/id_rsa_github.pub (chave pública)
+
 
 ## ⚙️ Workflow GitHub Actions
 
