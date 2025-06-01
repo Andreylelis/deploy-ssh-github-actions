@@ -57,8 +57,7 @@ infra-devops-hw/
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
-}
-upstream backend {
+}upstream backend {
     server 127.0.0.1:8081;  # Instância 1 do seu app
     server 127.0.0.1:8082;  # Instância 2 do seu app
 }
@@ -73,6 +72,11 @@ upstream backend {
 7. Reinicie o Nginx:
    ```bash
    systemctl restart nginx
+
+8. Teste o balanceamento
+   ```bash
+   curl http://localhost
+
 
 ## ✅ Resultado do Balanceamento
 ![Balanciamento de cagas_nginx](https://github.com/user-attachments/assets/a3027275-abf1-4b26-baa5-77777e6e1d5b)
