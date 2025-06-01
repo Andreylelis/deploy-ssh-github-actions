@@ -8,6 +8,22 @@ Este projeto demonstra um balanceamento de cargas utilizando Nginx, onde há dua
 - Nginx
 - Deploy via SSH
 
+-----
+## 📁 Estrutura do Projeto
+
+infra-devops-hw/
+├── app/
+│ ├── index1.html
+│ └── index2.html
+├── scripts/
+│ └── deploy.sh
+├── nginx/
+├── bkp.yml
+└── .github/
+└── workflows/
+└── deploy.yml
+
+-----
 ## ⚙️ Configuração
 1. Com o servidor UP(funcionando), instalar os pacotes necessários que iremos utilizar(nginx,git, python3).Segue abaixo:
     ```bash 
@@ -67,30 +83,11 @@ upstream backend {
 
 ✅ Testes realizados com curl http://localhost mostrando alternância entre as instâncias.
 
+## ⚙️ Workflow GitHub Actions
+
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
-
----
-
-## 📁 Estrutura do Projeto
-
-infra-devops-hw/
-├── app/
-│ ├── index1.html
-│ └── index2.html
-├── scripts/
-│ └── deploy.sh
-├── nginx/
-├── bkp.yml
-└── .github/
-└── workflows/
-└── deploy.yml
-
-
----
-
-## ⚙️ Workflow GitHub Actions
 
 - O workflow `deploy.yml` é acionado automaticamente após o push para o repositório.
 - Utiliza a action [`appleboy/ssh-action`](https://github.com/appleboy/ssh-action) para conectar no servidor via SSH.
