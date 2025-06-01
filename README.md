@@ -96,12 +96,27 @@ upstream backend {
 Para permitir que o GitHub se conecte via SSH à sua máquina de destino (servidor):
 1. Gere um par de chaves SSH no terminal
    ```bash
-   ssh-keygen -t rsa -b 4096 -C "github-deploy" -f ~/.ssh/id_rsa_github
+   ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
+
 
 2. Vai gerar dois arquivos
    ```bash
-   ~/.ssh/id_rsa_github (chave privada)
-   ~/.ssh/id_rsa_github.pub (chave pública)
+   ~/.ssh/github-actions-key (chave privada)
+   ~/.ssh/github-actions-key.pub (chave pública)
+
+Use essa para autorizar o acesso ao servidor remoto.
+3. Copie a chave pública para o servidor remoto
+   ```bash
+   cat ~/.ssh/github-actions-key.pub >> ~/.ssh/authorized_keys
+
+4. Chave privada (github-actions-key)
+Use essa para autenticar o GitHub Actions
+   ```bash
+   cat ~/.ssh/github-actions-key
+Copie tudo, incluindo as linhas:
+-----BEGIN RSA PRIVATE KEY-----
+...chave privada aqui...
+-----END RSA PRIVATE KEY-----
 
 ---
 ## ⚙️ Workflow GitHub Actions
