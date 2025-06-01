@@ -14,3 +14,4 @@ Este projeto demonstra a automação de deploy em uma máquina virtual (EC2 ou s
    ```bash
    ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_deploy
 
+# test
