@@ -88,6 +88,19 @@ upstream backend {
 
 ✅ Testes realizados com curl http://localhost mostrando alternância entre as instâncias.
 
+
+---
+
+## 🔐 Segurança
+
+- As credenciais SSH são armazenadas como **secrets no GitHub**:
+  - `HOST` — Endereço do servidor;
+  - `USERNAME` — Usuário SSH;
+  - `KEY` — Chave privada;
+- O script é executado sem interação e exige permissões apropriadas para gravar no diretório de destino.
+
+---
+
 ## ⚙️ Workflow GitHub Actions
 
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
@@ -101,15 +114,10 @@ upstream backend {
   - Copia os arquivos HTML para `/var/www/html` no servidor remoto.
 
 ---
-
-## 🔐 Segurança
-
-- As credenciais SSH são armazenadas como **secrets no GitHub**:
-  - `HOST` — Endereço do servidor;
-  - `USERNAME` — Usuário SSH;
-  - `KEY` — Chave privada;
-- O script é executado sem interação e exige permissões apropriadas para gravar no diretório de destino.
-
+2. Criar os arquivo do deploy.yml(código disponível)
+   ```bash
+   vim /home/ubuntu/infra-devops-hw/scripts/deploy.sh
+   vim vim /home/ubuntu/infra-devops-hw/scripts/teste.yml
 ---
 
 ## ✅ Resultado do Deploy
