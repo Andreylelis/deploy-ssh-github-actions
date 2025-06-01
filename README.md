@@ -115,7 +115,7 @@ Copie tudo, incluindo as linhas:
 ...chave privada aqui...
 -----END RSA PRIVATE KEY-----
 
-13.Settings → Secrets and variables → Actions → New repository secret
+5.Settings → Secrets and variables → Actions → New repository secret
    ```bash
    HOST IP
    USERNAME ubuntu
@@ -144,7 +144,7 @@ A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
   
 ## ⚙️ Workflow GitHub Actions
 
-1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
+6. Gere uma chave SSH para uso exclusivo do GitHub Actions:
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
 
@@ -155,7 +155,7 @@ A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
   - Copia os arquivos HTML para `/var/www/html` no servidor remoto.
 
 ---
-2. Criar os arquivo do deploy.yml(código disponível)
+7. Criar os arquivo do deploy.yml(código disponível)
    ```bash
    vim /home/ubuntu/infra-devops-hw/scripts/deploy.sh
    vim vim /home/ubuntu/infra-devops-hw/scripts/teste.yml
