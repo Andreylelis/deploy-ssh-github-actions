@@ -99,7 +99,7 @@ Para permitir que o GitHub se conecte via SSH à sua máquina de destino (servid
    ssh-keygen -t rsa -b 4096 -C "github-deploy" -f ~/.ssh/id_rsa_github
 
 2. Vai gerar dois arquivos
-```bash
+   ```bash
    ~/.ssh/id_rsa_github (chave privada)
    ~/.ssh/id_rsa_github.pub (chave pública)
 
