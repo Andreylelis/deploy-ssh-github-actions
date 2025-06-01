@@ -134,18 +134,18 @@ A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
 
 ✅ Subir no GitHub
     ```bash
-       git init
-       git add .
-       git commit -m "Testando deploy SSH"
-       git remote add origin https://github.com/Andreylelis/deploy-ssh-github-actions.git
-       git push origin main
+    git init
+    git add .
+    git commit -m "Testando deploy SSH"
+    git remote add origin https://github.com/Andreylelis/deploy-ssh-github-actions.git
+    git push origin main
 
 ---
 ## ⚙️ Workflow GitHub Actions
 
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
-   ```bash
-   ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
+    ```bash
+    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
 
  O workflow `deploy.yml` é acionado automaticamente após o push para o repositório.
 - Utiliza a action [`appleboy/ssh-action`](https://github.com/appleboy/ssh-action) para conectar no servidor via SSH.
