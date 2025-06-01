@@ -94,10 +94,10 @@ upstream backend {
 🔐 Configuração da chave SSH (deploy via GitHub Actions)
 
 Para permitir que o GitHub se conecte via SSH à sua máquina de destino (servidor):
+
 9. Gere um par de chaves SSH no terminal
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
-
 
 10. Vai gerar dois arquivos
    ```bash
@@ -172,8 +172,8 @@ git push origin main
 - Conteúdo estático disponível via navegador, servido pelo NGINX (ou servidor configurado no destino).
 
 ---
-[image](https://github.com/user-attachments/assets/1eec5aa1-f40a-4c67-b876-9f7c98375c31)
-[image](https://github.com/user-attachments/assets/97d56ccd-3645-4a21-a3ed-c0924543c3be)
+![image](https://github.com/user-attachments/assets/1eec5aa1-f40a-4c67-b876-9f7c98375c31)
+![image](https://github.com/user-attachments/assets/97d56ccd-3645-4a21-a3ed-c0924543c3be)
 
 
 ## 📸 Prints do item 1 - Configuração da Máquina Virtual - AWS EC2 UBUNTU
