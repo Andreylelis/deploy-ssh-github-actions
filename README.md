@@ -121,11 +121,12 @@ Use essa para autenticar o GitHub Actions
    USERNAME ubuntu
    KEY	Conteúdo da chave privada
 
-⚠️ NÃO usar a chave pública no GitHub
+⚠️NÃO usar a chave pública no GitHub
 
 A chave pública (.pub) vai só no servidor.
 A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
 
+---
 ⚠️ Se atente para verificar as permissões
    ```bash
    chown -R ubuntu:ubuntu /home/ubuntu/.ssh
