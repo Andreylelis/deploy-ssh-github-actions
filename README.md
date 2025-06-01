@@ -17,10 +17,10 @@ Este projeto demonstra a automação de deploy em uma máquina virtual (EC2) uti
     ```bash
     mkdir infra-devops-hw
     mkdir -p /var/www/html/instancia{1,2}
-    Acessar o diretório criado (infra-devops-hw) 
+2.1 Acessar o diretório criado (infra-devops-hw) 
     cd infra-devops-hw/
     mkdir -p .github/workflows app/instancia1 app/instancia2 scripts nginx
-    
+    vim app/index1.html
 
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
    ```bash
