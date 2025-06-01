@@ -73,7 +73,9 @@ infra-devops-hw/
 
 
 ## 📸 Prints do item 2 - 2. GitHub Actions 
-![image](https://github.com/user-attachments/assets/843348b1-cf1f-499f-940f-03deac877573)
+![image](https://github.com/user-attachments/assets/3c568f0a-8616-4eb5-a7bc-b9d378651c98)
+
+
 
 
 
