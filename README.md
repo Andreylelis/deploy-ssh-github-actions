@@ -115,7 +115,7 @@ Use essa para autenticar o GitHub Actions
    ...chave privada aqui...
    -----END RSA PRIVATE KEY-----
 
-1.Settings → Secrets and variables → Actions → New repository secret
+##⚙️Settings → Secrets and variables → Actions → New repository secret
    ```bash
    HOST IP
    USERNAME ubuntu
