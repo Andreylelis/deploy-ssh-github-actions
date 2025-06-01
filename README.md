@@ -128,6 +128,7 @@ upstream backend {
 
 ---
 ![image](https://github.com/user-attachments/assets/1eec5aa1-f40a-4c67-b876-9f7c98375c31)
+![image](https://github.com/user-attachments/assets/97d56ccd-3645-4a21-a3ed-c0924543c3be)
 
 
 ## 📸 Prints do item 1 - Configuração da Máquina Virtual - AWS EC2 UBUNTU
