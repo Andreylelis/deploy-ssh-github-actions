@@ -131,7 +131,7 @@ A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
    chmod 700 /home/ubuntu/.ssh
    chmod 600 /home/ubuntu/.ssh/authorized_keys
 
-✅ Subir no GitHub
+8. Subir no GitHub
     ```bash
     git init
     git add .
