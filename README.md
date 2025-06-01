@@ -1,10 +1,10 @@
 # Projeto - Deploy Automatizado com GitHub Actions via SSH
 
-Este projeto demonstra a automação de deploy em uma máquina virtual (EC2 ou similar) utilizando GitHub Actions e acesso SSH via chave.
+Este projeto demonstra a automação de deploy em uma máquina virtual (EC2) utilizando GitHub Actions e acesso SSH via chave.
 
 ## 🚀 Tecnologias
 - GitHub Actions
-- Ubuntu Server (VM)
+- Ubuntu Server (VM) - AWS
 - Nginx
 - Deploy via SSH
 
@@ -12,7 +12,7 @@ Este projeto demonstra a automação de deploy em uma máquina virtual (EC2 ou s
 
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
    ```bash
-   ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_deploy
+   ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
 
 # 🚀 Deploy Automatizado com GitHub Actions e SSH
 
@@ -74,6 +74,8 @@ infra-devops-hw/
 
 ## 📸 Prints do item 2 - 2. GitHub Actions 
 ![image](https://github.com/user-attachments/assets/3c568f0a-8616-4eb5-a7bc-b9d378651c98)
+![image](https://github.com/user-attachments/assets/6f1ccbc2-b369-4591-bd21-fb65d082a5eb)
+
 
 
 
