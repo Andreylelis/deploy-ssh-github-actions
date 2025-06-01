@@ -175,7 +175,8 @@ A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
 ![image](https://github.com/user-attachments/assets/6f1ccbc2-b369-4591-bd21-fb65d082a5eb)
 
 
-
+## ✍🏻 Autor 
+Andrey L S Fernandes
 
 
 
