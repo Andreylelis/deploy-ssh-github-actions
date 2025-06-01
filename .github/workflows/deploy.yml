@@ -22,6 +22,6 @@ jobs:
           port: 22
           script: |
             echo "Conectado via SSH com sucesso!"
-            cd /home/ubuntu/infra-devops-hw
+            cd /home/ubuntu/infra-devops-hw/scripts
             ./deploy.sh
 
