@@ -9,14 +9,22 @@ Este projeto demonstra a automação de deploy em uma máquina virtual (EC2) uti
 - Deploy via SSH
 
 ## ⚙️ Configuração
+1. Com o servidor UP(funcionando), instalar os pacotes necessários que iremos utilizar(nginx,git, python3).Segue abaixo:
+    ```bash 
+    apt install nginx git python3 python3-pip -y
+
+2. Criar os dirtórios abaixo:
+    ```bash
+    mkdir infra-devops-hw
+    mkdir -p /var/www/html/instancia{1,2}
+    Acessar o diretório criado (infra-devops-hw) 
+    cd infra-devops-hw/
+    mkdir -p .github/workflows app/instancia1 app/instancia2 scripts nginx
+    
 
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
-
-# 🚀 Deploy Automatizado com GitHub Actions e SSH
-
-Este projeto realiza o **deploy automático de arquivos HTML** para um servidor remoto utilizando **GitHub Actions** e conexão via **SSH**, de forma segura e prática.
 
 ---
 
