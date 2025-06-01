@@ -1,0 +1,6 @@
+- name: Executar script de deploy
+  run: |
+    cd /github/workspace
+    chmod +x scripts/deploy.sh
+    ./scripts/deploy.sh
+
