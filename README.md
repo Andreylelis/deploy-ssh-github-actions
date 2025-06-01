@@ -18,7 +18,7 @@ Este projeto demonstra um balanceamento de cargas utilizando Nginx, onde há dua
     mkdir infra-devops-hw
     mkdir -p /var/www/html/instancia{1,2}
     
-2.1 Acessar o diretório criado (infra-devops-hw) 
+3. Acessar o diretório criado (infra-devops-hw) 
     ```bash
     cd infra-devops-hw
     mkdir -p .github/workflows app/instancia1 app/instancia2 scripts nginx
