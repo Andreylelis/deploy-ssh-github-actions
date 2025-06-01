@@ -113,10 +113,22 @@ Use essa para autorizar o acesso ao servidor remoto.
 Use essa para autenticar o GitHub Actions
    ```bash
    cat ~/.ssh/github-actions-key
-Copie tudo, incluindo as linhas:
+  Copie tudo, incluindo as linhas:
 -----BEGIN RSA PRIVATE KEY-----
 ...chave privada aqui...
 -----END RSA PRIVATE KEY-----
+
+5.Settings → Secrets and variables → Actions → New repository secret
+HOST IP
+USERNAME ubuntu
+KEY	Conteúdo da chave privada
+
+⚠️ NÃO usar a chave pública no GitHub
+
+A chave pública (.pub) vai só no servidor.
+A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
+
+
 
 ---
 ## ⚙️ Workflow GitHub Actions
