@@ -142,7 +142,6 @@ A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
 ---
 ## ⚙️ Workflow GitHub Actions
  O workflow `deploy.yml` é acionado automaticamente após o push para o repositório.
-- Utiliza a action [`appleboy/ssh-action`](https://github.com/appleboy/ssh-action) para conectar no servidor via SSH.
 - Executa o script `deploy.sh`, que:
 - Lista os arquivos no diretório `app/`;
 - Copia os arquivos HTML para `/var/www/html` no servidor remoto.
