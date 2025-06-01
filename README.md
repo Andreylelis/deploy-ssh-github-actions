@@ -33,8 +33,7 @@ Este projeto demonstra um balanceamento de cargas utilizando Nginx, onde há dua
     vim /etc/nginx/sites-available/default
     server {
     listen 80;
-    server_name 54.224.183.226;  # Substitua pelo IP público ou domínio da sua instância AWS
-
+    server_name 54.224.183.226;  
     location / {
         proxy_pass http://backend;
         proxy_set_header Host $host;
@@ -42,7 +41,6 @@ Este projeto demonstra um balanceamento de cargas utilizando Nginx, onde há dua
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
 }
-
 upstream backend {
     server 127.0.0.1:8081;  # Instância 1 do seu app
     server 127.0.0.1:8082;  # Instância 2 do seu app
