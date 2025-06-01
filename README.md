@@ -92,11 +92,11 @@ upstream backend {
 🔐 Configuração da chave SSH (deploy via GitHub Actions)
 Para permitir que o GitHub se conecte via SSH à sua máquina de destino (servidor):
 
-9. Gere um par de chaves SSH no terminal
+1. Gere um par de chaves SSH no terminal
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
 
-10. Vai gerar dois arquivos
+2. Vai gerar dois arquivos
    ```bash
    ~/.ssh/github-actions-key (chave privada)
    ~/.ssh/github-actions-key.pub (chave pública)
