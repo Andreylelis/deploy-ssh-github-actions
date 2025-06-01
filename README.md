@@ -23,11 +23,32 @@ Este projeto demonstra um balanceamento de cargas utilizando Nginx, onde há dua
     cd infra-devops-hw
     mkdir -p .github/workflows app/instancia1 app/instancia2 scripts nginx
     
-  2.2 Criar os arquivos (index1.html, index2.html).Está localizado no (app).Será utilizado para uma das partes do projeto. Balanceamento com NGINX.
+4. Criar os arquivos (index1.html, index2.html).Está localizado no (app).Será utilizado para uma das partes do projeto. Balanceamento com NGINX.
     ```bash
     vim app/index1.html
     vim app/index2.html
-    
+
+5. Editar o arquivo NGINX
+    ```bash
+    vim /etc/nginx/sites-available/default
+    server {
+    listen 80;
+    server_name 54.224.183.226;  # Substitua pelo IP público ou domínio da sua instância AWS
+
+    location / {
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+upstream backend {
+    server 127.0.0.1:8081;  # Instância 1 do seu app
+    server 127.0.0.1:8082;  # Instância 2 do seu app
+}
+
+ 
 1. Gere uma chave SSH para uso exclusivo do GitHub Actions:
    ```bash
    ssh-keygen -t rsa -b 4096 -C "github-actions-deploy" -f ~/.ssh/github-actions-key
