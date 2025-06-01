@@ -114,19 +114,18 @@ Use essa para autenticar o GitHub Actions
    -----BEGIN RSA PRIVATE KEY-----
    ...chave privada aqui...
    -----END RSA PRIVATE KEY-----
-
-⚙️Settings → Secrets and variables → Actions → New repository secret
+5. Settings → Secrets and variables → Actions → New repository secret
    ```bash
    HOST IP
    USERNAME ubuntu
    KEY	Conteúdo da chave privada
 
-NÃO usar a chave pública no GitHub
+6. NÃO usar a chave pública no GitHub
 A chave pública (.pub) vai só no servidor.
 A chave privada (sem extensão) vai só no GitHub Actions, como KEY.
 
----
-⚠Se atente para verificar as permissões
+
+7. Se atente para verificar as permissões
    ```bash
    chown -R ubuntu:ubuntu /home/ubuntu/.ssh
    chmod 700 /home/ubuntu/.ssh
