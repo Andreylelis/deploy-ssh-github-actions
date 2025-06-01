@@ -57,7 +57,9 @@ infra-devops-hw/
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
-}upstream backend {
+}
+```bash
+upstream backend {
     server 127.0.0.1:8081;  # Instância 1 do seu app
     server 127.0.0.1:8082;  # Instância 2 do seu app
 }
