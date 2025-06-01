@@ -137,13 +137,12 @@ chmod 600 /home/ubuntu/.ssh/authorized_keys
 
 ✅ Subir no GitHub
    ```bash
-  git init
-  git add .
-  git commit -m "Testando deploy SSH"
-  git remote add origin https://github.com/Andreylelis/deploy-ssh-github-actions.git
-  git push origin main
+git init
+git add .
+git commit -m "Testando deploy SSH"
+git remote add origin https://github.com/Andreylelis/deploy-ssh-github-actions.git
+git push origin main
   
----
 
 ## ⚙️ Workflow GitHub Actions
 
