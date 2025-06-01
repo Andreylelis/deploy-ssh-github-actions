@@ -52,16 +52,16 @@ infra-devops-hw/
     listen 80;
     server_name 54.224.183.226;  
     location / {
-        proxy_pass http://backend;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_pass http://backend;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
-}
-upstream backend {
+    }
+    upstream backend {
     server 127.0.0.1:8081;  # Instância 1 do seu app
     server 127.0.0.1:8082;  # Instância 2 do seu app
-}
+    }
 
 6. Agora crie duas instâncias com Python para simular os dois servidores:
    ```bash
