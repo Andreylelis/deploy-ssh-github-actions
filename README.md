@@ -111,9 +111,9 @@ Use essa para autenticar o GitHub Actions
    ```bash
    cat ~/.ssh/github-actions-key
    Copie tudo, incluindo as linhas:
------BEGIN RSA PRIVATE KEY-----
-...chave privada aqui...
------END RSA PRIVATE KEY-----
+   -----BEGIN RSA PRIVATE KEY-----
+   ...chave privada aqui...
+   -----END RSA PRIVATE KEY-----
 
 1.Settings → Secrets and variables → Actions → New repository secret
    ```bash
