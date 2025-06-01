@@ -67,8 +67,8 @@ upstream backend {
    ```bash
    cd /var/www/html/instancia1
    python3 -m http.server 8081 &
-   cd /var/www/html/instancia1
-   python3 -m http.server 8081 &
+   cd /var/www/html/instancia2
+   python3 -m http.server 8082 &
 
 7. Reinicie o Nginx:
    ```bash
