@@ -127,6 +127,7 @@ upstream backend {
 - Conteúdo estático disponível via navegador, servido pelo NGINX (ou servidor configurado no destino).
 
 ---
+![image](https://github.com/user-attachments/assets/1eec5aa1-f40a-4c67-b876-9f7c98375c31)
 
 
 ## 📸 Prints do item 1 - Configuração da Máquina Virtual - AWS EC2 UBUNTU
