@@ -47,6 +47,7 @@ infra-devops-hw/
 5. Editar o arquivo NGINX
     ```bash
     vim /etc/nginx/sites-available/default e colar as linhas abaixo:
+
     ```bash
     server {
     listen 80;
@@ -59,8 +60,8 @@ infra-devops-hw/
     }
     }
     upstream backend {
-    server 127.0.0.1:8081;  # Instância 1 do seu app
-    server 127.0.0.1:8082;  # Instância 2 do seu app
+    server 127.0.0.1:8081;  # Instância 1 
+    server 127.0.0.1:8082;  # Instância 2 
     }
 
 6. Agora crie duas instâncias com Python para simular os dois servidores:
